@@ -16,6 +16,8 @@ https://github.com/AlejandraKeber/To-Do-List.git
 ```
 - Open the folder with you code editor
 
+## Live Demo
+https://alejandrakeber.github.io/To-Do-List/dist/
 
 ## Authors:
 
