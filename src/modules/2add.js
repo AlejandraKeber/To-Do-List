@@ -1,5 +1,7 @@
 import Task from './1task.js';
 
+/* Store Tasks */
+
 export default function addTask(task) {
   const parsedArr = JSON.parse(localStorage.getItem('taskArr')) || [];
   const counter = parsedArr.length + 1;
