@@ -4,22 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bfdabd94cd.js" crossorigin="anonymous"></script>
     <title>To Do List</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="title box">
-            <h1 class="title">Today's To Do</h1>
-            <button class="refresh">O</button>
+        <div class="b-bottom box">
+            <h1 class="">Today's To Do</h1>
+            <button type="button" class="refresh btn" onClick="window.location.reload();">
+                <i id="refresh" class="fa-solid fa-rotate"></i>
+            </button>
         </div>
-        <form class="form title">
-            <input type="box text" class="new-task" placeholder="Add to your list...">
+        <form class="form b-bottom box" name="form" method="get">
+            <input type="text" name="task" class="text-field full" placeholder="Add to your list..." required>
+            <button type="submit" class="submit btn">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
         </form>
         <ul class="task-list">
-
+            <!-- taskList from js -->
         </ul>
-        <div class="box clear">Clear all completed</div>
+        <div class="box clr-all">Clear all completed</div>
     </div>
 </body>
 
