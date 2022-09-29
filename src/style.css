@@ -2,8 +2,8 @@
   margin: 0;
   padding: 0;
   font-size: 1rem;
-  font-family: sans-serif;
-  letter-spacing: 0.03rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 0.02rem;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
   box-shadow: #c0bdbd 0 5px 10px;
 }
 
-.title {
+.b-bottom {
   border-bottom: 2px solid #c0bdbd;
 }
 
@@ -34,8 +34,8 @@ input {
   outline: none;
 }
 
-button,
-h1 {
+h1,
+textarea {
   all: unset;
 }
 
@@ -47,7 +47,7 @@ h1 {
   gap: 15px;
 }
 
-.clear {
+.clr-all {
   color: #c0bdbd;
   background-color: #f4f4f4;
   justify-content: center;
@@ -63,16 +63,33 @@ input::placeholder {
   font-style: italic;
 }
 
-.new-task {
-  width: 90%;
-  height: 20px;
-  padding: 5px;
+.full {
+  width: 100%;
 }
 
-.task-list {
-  padding: 5px;
+.btn {
+  width: 25px;
+  height: 25px;
+  border: none;
+  background-color: #f4f4f4;
+  border-radius: 5px;
 }
 
-.delete {
-  align-self: flex-end;
+.btn:hover {
+  background-color: #c0bdbd;
+}
+
+img {
+  width: 80%;
+  height: 80%;
+  filter: opacity(50%);
+  padding: 5%;
+}
+
+.update {
+  margin-right: 1rem;
+}
+
+.task-text {
+  padding-top: 10px;
 }
