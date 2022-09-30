@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #f4f4f4;
+  background-color: #5ccda7;
 }
 
 .container {
@@ -48,9 +48,12 @@ textarea {
 }
 
 .clr-all {
-  color: #c0bdbd;
-  background-color: #f4f4f4;
+  background-color: #eee;
   justify-content: center;
+}
+
+.clr-all:hover {
+  background-color: #c0bdbd;
 }
 
 .checkbox {
