@@ -1,4 +1,4 @@
-export default function displayTasks() {
+/* export default */ function displayTasks() {
   const taskList = document.querySelector('.task-list');
 
   /* Display Tasks */
@@ -85,3 +85,5 @@ export default function displayTasks() {
     return taskList;
   });
 }
+
+module.exports = displayTasks;
