@@ -29,15 +29,16 @@ describe('Edit task', () => {
     displayTasks();
     const taskItem = document.querySelector('li');
     const taskForm = taskItem.querySelector('textarea');
-    taskForm.click(e => {
-      new FormData(e.target = 'helooooooo');
-    });
+    const updatedText = taskForm.value = "Hey";
     const locStorage = localStorage.getItem('taskArr');
-
+    const arrTasks = JSON.parse(locStorage);
+    taskForm.click();
+    arrTasks[0].description = updatedText;
+    const result = JSON.stringify(arrTasks);
     displayTasks();
-    expect(locStorage).toEqual(JSON.stringify([{
+    expect(result).toEqual(JSON.stringify([{
       index: 1,
-      description: 'Hello',
+      description: 'Hey',
       completed: false,
     }]));
   })
