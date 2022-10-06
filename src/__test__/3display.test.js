@@ -23,17 +23,16 @@ describe('Delete task', () => {
 });
 
 describe('Edit task', () => {
-
   test('Should edit text when clicked', () => {
     addTask('Hello');
     displayTasks();
     const taskItem = document.querySelector('li');
     const taskForm = taskItem.querySelector('textarea');
-    const updatedText = taskForm.value = "Hey";
+    taskForm.value = 'Hey';
     const locStorage = localStorage.getItem('taskArr');
     const arrTasks = JSON.parse(locStorage);
     taskForm.click();
-    arrTasks[0].description = updatedText;
+    arrTasks[0].description = taskForm.value;
     const result = JSON.stringify(arrTasks);
     displayTasks();
     expect(result).toEqual(JSON.stringify([{
@@ -41,8 +40,7 @@ describe('Edit task', () => {
       description: 'Hey',
       completed: false,
     }]));
-  })
-
+  });
 });
 
 describe('Checkbox', () => {
@@ -56,7 +54,7 @@ describe('Checkbox', () => {
       description: 'Hello',
       completed: true,
     }]));
-  })
+  });
 });
 
 describe('Clear all completed', () => {
@@ -66,6 +64,5 @@ describe('Clear all completed', () => {
     clearTasks();
     displayTasks();
     expect(list).toHaveLength(1);
-  })
-})
-
+  });
+});
