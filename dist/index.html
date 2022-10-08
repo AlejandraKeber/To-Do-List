@@ -10,14 +10,14 @@
 
 <body>
     <div class="container">
-        <div class="b-bottom box">
-            <h1 class="">Today's To Do</h1>
+        <div class="todo box">
+            <h1 class="title">Today's To Do</h1>
             <button type="button" class="refresh btn" onClick="window.location.reload();">
                 <i id="refresh" class="fa-solid fa-rotate"></i>
             </button>
         </div>
-        <form class="form b-bottom box" name="form" method="get">
-            <input type="text" name="task" class="text-field full" placeholder="Add to your list..." required>
+        <form class="form task box" name="form" method="get">
+            <input type="text" name="task" class="task-text full" placeholder="Add to your list..." required>
             <button type="submit" class="submit btn">
                 <i class="fa-solid fa-paper-plane"></i>
             </button>
@@ -25,7 +25,7 @@
         <ul class="task-list">
             <!-- taskList from js -->
         </ul>
-        <div class="box clr-all">Clear all completed</div>
+        <div class="clear box">Clear all completed</div>
     </div>
 </body>
 

@@ -13,7 +13,7 @@ form.addEventListener('submit', (e) => {
   displayTasks();
 });
 
-const clearBtn = document.querySelector('.clr-all');
+const clearBtn = document.querySelector('.clear');
 
 clearBtn.addEventListener('click', (e) => {
   e.preventDefault();

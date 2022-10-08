@@ -21,7 +21,8 @@ body {
   box-shadow: #c0bdbd 0 5px 10px;
 }
 
-.b-bottom {
+.todo,
+.task {
   border-bottom: 2px solid #c0bdbd;
 }
 
@@ -34,9 +35,14 @@ input {
   outline: none;
 }
 
-h1,
 textarea {
   all: unset;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-align: center;
 }
 
 .box {
@@ -47,12 +53,12 @@ textarea {
   gap: 15px;
 }
 
-.clr-all {
+.clear {
   background-color: #eee;
   justify-content: center;
 }
 
-.clr-all:hover {
+.clear:hover {
   background-color: #c0bdbd;
 }
 

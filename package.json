@@ -43,5 +43,6 @@
   "jest": {
     "testEnvironment": "jsdom",
     "verbose": true
-  }
+  },
+  "main": "server.js"
 }

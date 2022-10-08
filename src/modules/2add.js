@@ -10,6 +10,6 @@ export default function addTask(task) {
   parsedArr.push(newTask);
   localStorage.setItem('taskArr', JSON.stringify(parsedArr));
 
-  const taskfield = document.querySelector('.text-field');
+  const taskfield = document.querySelector('.task-text');
   taskfield.value = '';
 }
