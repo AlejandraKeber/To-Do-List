@@ -1,8 +1,8 @@
-import addTask from '../modules/2add';
-import displayTasks from '../modules/3display';
-import clearTasks from '../modules/4clear';
+import addTask from '../modules/add';
+import displayTasks from '../modules/display';
+import clearTasks from '../modules/clear';
 
-document.body.innerHTML = '<input type="text" name="task" class="text-field full" placeholder="Add to your list..." required> <ul class="task-list"> </ul> <div class="box clr-all">Clear all completed</div>';
+document.body.innerHTML = '<input type="text" name="task" class="text-field" placeholder="Add to your list..." required> <ul class="tasklist"> </ul> <div class="box clr-all">Clear all completed</div>';
 
 describe('Add task', () => {
   test('Should add one element when is called', () => {

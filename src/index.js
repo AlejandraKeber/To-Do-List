@@ -1,8 +1,8 @@
 import _ from 'lodash'; // eslint-disable-line
 import './style.css';
-import addTask from './modules/2add.js';
-import displayTasks from './modules/3display.js';
-import clearTasks from './modules/4clear.js';
+import addTask from './modules/add.js';
+import displayTasks from './modules/display.js';
+import clearTasks from './modules/clear.js';
 
 const form = document.querySelector('.form');
 

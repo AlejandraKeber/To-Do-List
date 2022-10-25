@@ -1,5 +1,5 @@
 export default function displayTasks() {
-  const taskList = document.querySelector('.task-list');
+  const taskList = document.querySelector('.tasklist');
 
   /* Display Tasks */
   let parsedArr = JSON.parse(localStorage.getItem('taskArr')) || [];
@@ -16,9 +16,9 @@ export default function displayTasks() {
       box = '';
       styling = 'none';
     }
-    taskItem.innerHTML = `<form class="task-form b-bottom box">
+    taskItem.innerHTML = `<form class="taskform box">
       <input name="completed" type="checkbox" ${box} class="checkbox">
-      <textarea name="description" rows="1" class="task-text full" style="text-decoration:${styling}">${task.description}</textarea>
+      <textarea name="description" rows="1" class="tasktext" style="text-decoration:${styling}">${task.description}</textarea>
       <button type="button" class="delete btn">
       <i class="fa-solid fa-trash"></i>
       </button>
@@ -29,20 +29,20 @@ export default function displayTasks() {
     taskList.appendChild(taskItem);
 
     const deleteBtn = taskItem.querySelector('.delete');
-    const updateBtn = taskItem.querySelector('.update');
-    const updateText = taskItem.querySelector('.task-text');
+    const editBtn = taskItem.querySelector('.update');
+    const updateText = taskItem.querySelector('.tasktext');
 
-    updateBtn.style.display = 'none';
+    editBtn.style.display = 'none';
 
     /* Edit task */
     updateText.addEventListener('click', (e) => {
       e.preventDefault();
-      updateBtn.style.display = 'block';
+      editBtn.style.display = 'block';
       deleteBtn.style.display = 'none';
       updateText.style.backgroundColor = '#f4f4f4';
     });
 
-    const taskForm = taskItem.querySelector('.task-form');
+    const taskForm = taskItem.querySelector('.taskform');
     taskForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const input = Object.fromEntries(
@@ -50,7 +50,7 @@ export default function displayTasks() {
       );
       task.description = input.description;
       localStorage.setItem('taskArr', JSON.stringify(parsedArr));
-      updateBtn.style.display = 'none';
+      editBtn.style.display = 'none';
       deleteBtn.style.display = 'block';
       updateText.style.backgroundColor = '#fff';
     });
@@ -69,7 +69,7 @@ export default function displayTasks() {
       taskList.removeChild(taskItem);
     });
 
-    /* Checkbox status   */
+    /* Checkbox status */
     const checkbox = taskItem.querySelector('.checkbox');
     checkbox.addEventListener('change', () => {
       task.completed = checkbox.checked;
